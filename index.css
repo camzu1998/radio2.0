@@ -35,6 +35,7 @@ body{
 }
 #center{
     text-align: center;
+    margin: 0 auto;
 }
 .page-navigation a {
     font-size: 16px;
@@ -44,3 +45,4 @@ body{
 .page-navigation a[data-selected] {
 
 }
+table { width: 500px; margin: 0 auto; text-align: left; }
