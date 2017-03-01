@@ -46,7 +46,7 @@
                 }
             }?>
                 </tbody>
-            </table>
+            </table>t
         </div>
     </div>
     <footer id="footer" class="container" style="max-width: 100%; margin-top: 10%;">
