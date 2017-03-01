@@ -50,9 +50,9 @@
                         echo '</tr>';
                         $lp++;
                     }
-
                 }
-                ?>
+            }
+            ?>
             </table>
             <input type="submit" name="glos" class="inputBTN" value="Głosuj"/>
         </div>
