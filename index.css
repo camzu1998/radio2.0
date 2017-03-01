@@ -1,5 +1,6 @@
 body{
     background: #F9F9F9;
+    color: #555;
 }
 
 #header{
@@ -27,4 +28,9 @@ body{
     margin: auto;
     right: 0; left: 0;
     background-color: #f5f5f5;
+}
+.noLink
+{
+    text-decoration: none;
+    color: #555;
 }
