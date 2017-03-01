@@ -24,7 +24,7 @@
                 <h2>Top 5 miesiąca</h2>
                 <table class="u-full-width">
                     <thead>
-                        <tr><th>Lp.</th><th>Tytuł</th><th>Pky.</th></tr>
+                        <tr><th>Lp.</th><th>Tytuł</th><th>Pkt.</th></tr>
                     </thead>
                     <tbody>
                         <tr><td>1.</td><td>Cypis - Nie spać</td><td>120pkt</td></tr>
