@@ -29,8 +29,18 @@ body{
     right: 0; left: 0;
     background-color: #f5f5f5;
 }
-.noLink
-{
+.noLink{
     text-decoration: none;
     color: #555;
+}
+#center{
+    text-align: center;
+}
+.page-navigation a {
+    font-size: 16px;
+    margin-right: 5px;
+}
+
+.page-navigation a[data-selected] {
+
 }
