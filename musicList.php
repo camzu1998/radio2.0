@@ -25,35 +25,26 @@
             $polaczenie = @new mysqli($host, $db_user, $db_password, $db_name);
             $polaczenie->set_charset("utf8");
             $polaczenie->query("SET CHARACTER_SET utf8_polish_ci");
-            if ($polaczenie->connect_errno!=0)
-            {
+            if ($polaczenie->connect_errno!=0){
                 echo "Error: ".$polaczenie->connect_errno;
-            }
-            else
-            {
-            ?>
+            }else{ ?>
             <table class="tabel">
                 <thead><tr><th></th><th>Lp.</th><th>Autor</th><th>Tytuł</th></tr></thead>
                 <tbody>
                 <?php
                 $lp=1;
-                if(isset($_POST['Szukaj']))
-                {
-                    $rezultat = $polaczenie->query("SELECT * FROM `Muzyka` WHERE 1");
-                    for($i=0;$i<$rezultat->num_rows;$i++)
-                    {
-                        $wiersz = $rezultat->fetch_assoc();
+                $rezultat = $polaczenie->query("SELECT * FROM `Muzyka` WHERE 1");
+                for($i=0;$i<$rezultat->num_rows;$i++){
+                    $wiersz = $rezultat->fetch_assoc();
                         $ID = $wiersz['ID'];
                         $Autor = $wiersz['Autor'];
                         $Tytul = $wiersz['Tytul'];
-                        echo '<tr>';
-                        echo '<td><input type="radio" name="tytul" value='.$ID.'/></td><td>'.$lp.'</td><td>'.$Autor.'</td><td>'.$Tytul.'</td>';
-                        echo '</tr>';
-                        $lp++;
-                    }
+                    echo '<tr>';
+                    echo '<td><input type="radio" name="tytul" value='.$ID.'/></td><td>'.$lp.'</td><td>'.$Autor.'</td><td>'.$Tytul.'</td>';
+                    echo '</tr>';
+                    $lp++;
                 }
-            }
-            ?>
+            }?>
                 </tbody>
             </table>
         </div>
