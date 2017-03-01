@@ -34,6 +34,7 @@
             ?>
             <table class="tabel">
                 <thead><tr><th></th><th>Lp.</th><th>Autor</th><th>Tytuł</th></tr></thead>
+                <tbody>
                 <?php
                 $lp=1;
                 if(isset($_POST['Szukaj']))
@@ -53,8 +54,8 @@
                 }
             }
             ?>
+                </tbody>
             </table>
-            <input type="submit" name="glos" class="inputBTN" value="Głosuj"/>
         </div>
     </div>
     <footer id="footer" class="container" style="max-width: 100%; margin-top: 10%;">
