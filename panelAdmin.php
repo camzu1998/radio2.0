@@ -34,7 +34,7 @@
                             <img src="images/user.ico" id="loginImg" height="200px"/>
                         </div>
                         <div id="content">
-                            <form action="#" method="#">
+                            <form action="#" method="post">
                                 <span><b>Login:</b></span><br>
                                 <input type="text" name="login" placeholder="Wpisz login"/> <br>
                                 <span><b>Hasło:</b></span><br>
