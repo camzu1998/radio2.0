@@ -13,8 +13,8 @@
     <link rel="stylesheet" href="musicList.css">
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
     <script src="js/jquery-paginate.js"></script>
-    <script src="js/search.js"></script>
 </head>
 <body>
     <div class="container">
@@ -25,7 +25,7 @@
             <?php include"menu.php" ?>
         </div>
         <form action="#" method="post" style="text-align: center; margin-top: 4%;">
-            <input type="text" id="szukajka" onkeyup="szukaj()" name="search" placeholder="Szukaj..">
+            <input type="text" id="szukajka" oninput="w3.filterHTML('#utwory', '.item', this.value)" name="search" placeholder="Szukaj..">
             <div class="row" id="content" style="margin-top: 0% !important;">
                 <div class="twelve columns" id="center">
                     <?php
@@ -47,7 +47,7 @@
                                 $ID = $wiersz['ID'];
                                 $Autor = $wiersz['Autor'];
                                 $Tytul = $wiersz['Tytul'];
-                            echo '<tr>';
+                            echo '<tr class="item">';
                             echo '<td><input type="radio" name="tytul" value='.$ID.'/></td><td>'.$lp.'</td><td>'.$Autor.'</td><td>'.$Tytul.'</td>';
                             echo '</tr>';
                             $lp++;
