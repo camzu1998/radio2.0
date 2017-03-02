@@ -1,0 +1,12 @@
+#LoginPopup{
+    display: none;
+    box-shadow: 10px 10px 5px grey;
+    background: white;
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+}
+#loginImg{
+    margin-top: 10px;
+    border-radius: 50%;
+}

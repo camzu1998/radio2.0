@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/skeleton.css">
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="panelAdmin.css">
     <link rel="stylesheet" href="css/loginModal.css">
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/loginModalClosing.js"></script>
@@ -22,47 +23,37 @@
         <div class="row" id="header">
             <div class="twelve columns"><a href="index.php" class="noLink"><h1>Radio MIX</h1></a></div>
         </div>
-        <?php
-            if(!isset($_SESSION['AdminLogin'])){
-                //Wyświetlanie panelu logowania
-                ?>
-                <script>openModal();</script>
-                <!-- The Modal -->
-                <div id="id01" class="modal">
-                  <span onclick="document.getElementById('id01').style.display='none'"
-                class="close" title="Close Modal">&times;</span>
-
-                  <!-- Modal Content -->
-                  <form class="modal-content animate" action="/action_page.php">
-                    <div class="imgcontainer">
-                      <img src="images/img_avatar2.png" alt="Avatar" class="avatar">
+        <div class="row" style="text-align: center;">
+            <div class="twelve columns">
+            <?php
+                if(!isset($_SESSION['AdminLogin'])){
+                    //Wyświetlanie panelu logowania
+                    ?>
+                    <div id="LoginPopup">
+                        <div id="imgUP">
+                            <img src="images/user.ico" id="loginImg" height="200px"/>
+                        </div>
+                        <div id="content">
+                            <form action="#" method="#">
+                                <span><b>Login:</b></span><br>
+                                <input type="text" name="login" placeholder="Wpisz login"/> <br>
+                                <span><b>Hasło:</b></span><br>
+                                <input type="password" name="haslo" placeholder="Wpisz hasło"/> <br>
+                                <input type="submit" class="button-primary" name="Zaloguj" value="Zaloguj"/>
+                            </form>
+                        </div>
                     </div>
+                    <script>openModal();</script>
+                    <?php
+                } else {
+                    // Panel Admin
 
-                    <div class="container">
-                      <label><b>Username</b></label>
-                      <input type="text" placeholder="Enter Username" name="uname" required>
-
-                      <label><b>Password</b></label>
-                      <input type="password" placeholder="Enter Password" name="psw" required>
-
-                      <button type="submit">Login</button>
-                      <input type="checkbox" checked="checked"> Remember me
-                    </div>
-
-                    <div class="container" style="background-color:#f1f1f1">
-                      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-                      <span class="psw">Forgot <a href="#">password?</a></span>
-                    </div>
-                  </form>
-                </div>
-                <?php
-            } else {
-                // Panel Admin
-
-            }
-        ?>
+                }
+            ?>
+            </div>
+        </div>
     </div>
-    <footer id="footer" class="container" style="max-width: 100%; margin-top: 10%;">
+    <footer id="footer" class="container" style="max-width: 100%; margin-top: 2%;">
         Kamil Langer &copy; kamillanger4@gmail.com
     </footer>
 </body>
