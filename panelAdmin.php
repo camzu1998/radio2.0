@@ -17,7 +17,15 @@
         <div class="row" id="header">
             <div class="twelve columns"><a href="index.php" class="noLink"><h1>Radio MIX</h1></a></div>
         </div>
+        <?php
+            if(!isset($_SESSION['AdminLogin']){
+                //Wyświetlanie panelu logowania
 
+            } else {
+                // Panel Admin
+
+            }
+        ?>
     </div>
     <footer id="footer" class="container" style="max-width: 100%; margin-top: 10%;">
         Kamil Langer &copy; kamillanger4@gmail.com
