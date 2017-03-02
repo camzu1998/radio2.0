@@ -36,9 +36,9 @@
                         <div id="content">
                             <form action="#" method="post">
                                 <span><b>Login:</b></span><br>
-                                <input type="text" name="login" placeholder="Wpisz login"/> <br>
+                                <input type="text" name="login" placeholder="Wpisz login" required/> <br>
                                 <span><b>Hasło:</b></span><br>
-                                <input type="password" name="haslo" placeholder="Wpisz hasło"/> <br>
+                                <input type="password" name="haslo" placeholder="Wpisz hasło" required/> <br>
                                 <input type="submit" class="button-primary" name="Zaloguj" value="Zaloguj"/>
                             </form>
                         </div>
