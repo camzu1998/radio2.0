@@ -1,6 +1,6 @@
 #LoginPopup{
     display: none;
-    box-shadow: 10px 10px 5px grey;
+    box-shadow: 5px 5px 9px 1px grey;
     background: white;
     width: 50%;
     text-align: center;
@@ -10,10 +10,13 @@
     margin-top: 10px;
     border-radius: 50%;
 }
+#witaj{
+    font-size: 24px;
+}
 .window{
-    box-shadow: 10px 10px 5px grey;
+    box-shadow: 5px 5px 9px 1px grey;
     background: white;
-    height: 150px;
+    height: 170px;
     margin-top: 20px;
 }
 .title{
@@ -24,4 +27,18 @@
 }
 .content{
     font-size: 24px;
+}
+.tileLink:hover{
+    color: #555;
+}
+.windowHover:active{
+    background: #eee;
+}
+.inputWindow{
+    height: 26px !important;
+    font-size: 24px;
+}
+.logout:hover{
+    background: rgba(215, 0, 0, 0.5);
+    transition: background 1s;
 }
