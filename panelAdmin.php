@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="css/skeleton.css">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="panelAdmin.css">
-    <link rel="stylesheet" href="css/loginModal.css">
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/loginModalClosing.js"></script>
 </head>
@@ -34,7 +33,7 @@
                             <img src="images/user.ico" id="loginImg" height="200px"/>
                         </div>
                         <div id="content">
-                            <form action="#" method="post">
+                            <form action="zaloguj.php" method="post">
                                 <span><b>Login:</b></span><br>
                                 <input type="text" name="login" placeholder="Wpisz login" required/> <br>
                                 <span><b>Hasło:</b></span><br>
@@ -47,7 +46,7 @@
                     <?php
                 } else {
                     // Panel Admin
-
+                    include "panelAdminContent.php";
                 }
             ?>
             </div>

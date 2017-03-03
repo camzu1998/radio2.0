@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -8,9 +11,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
     <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/snackbar.js"></script>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/skeleton.css">
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="snackbar.css">
 </head>
 <body>
     <div class="container">
@@ -48,5 +53,13 @@
     <footer id="footer" class="container" style="max-width: 100%; margin-top: 10%;">
         Kamil Langer &copy; kamillanger4@gmail.com
     </footer>
+    <div id="snackbar"><span id="tekst"></span></div>
+    <?php
+    if(isset($_SESSION['blad'])){
+        ?><script>openSnackbar();</script><?php
+    } else if(isset($_SESSION['bladU'])){
+        ?><script>openSnackbarU();</script><?php
+    }
+    ?>
 </body>
 </html>

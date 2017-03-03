@@ -10,3 +10,18 @@
     margin-top: 10px;
     border-radius: 50%;
 }
+.window{
+    box-shadow: 10px 10px 5px grey;
+    background: white;
+    height: 150px;
+    margin-top: 20px;
+}
+.title{
+    font-size: 18px;
+    text-align: left;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+.content{
+    font-size: 24px;
+}
