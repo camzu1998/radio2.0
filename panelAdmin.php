@@ -14,15 +14,18 @@
     <link rel="stylesheet" href="css/skeleton.css">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="panelAdmin.css">
+    <link rel="stylesheet" href="loader.css">
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/loginModalClosing.js"></script>
+    <script src="js/loader.js"></script>
 </head>
-<body>
+<body onload="timeOut();">
+    <div id="loader"></div>
     <div class="container">
         <div class="row" id="header">
             <div class="twelve columns"><a href="index.php" class="noLink"><h1>Radio MIX</h1></a></div>
         </div>
-        <div class="row" style="text-align: center;">
+        <div class="row" id="content" style="text-align: center;">
             <div class="twelve columns">
             <?php
                 if(!isset($_SESSION['AdminLogin'])){

@@ -24,7 +24,7 @@
         <div class="row" id="menu">
             <?php include"menu.php" ?>
         </div>
-        <form action="#" method="post" style="text-align: center; margin-top: 4%;">
+        <form action="#" method="post" id="middle" style="text-align: center; margin-top: 4%;">
             <input type="text" id="szukajka" oninput="w3.filterHTML('#utwory', '.item', this.value)" name="search" placeholder="Szukaj..">
             <div class="row" id="content" style="margin-top: 0% !important;">
                 <div class="twelve columns" id="center">

@@ -1,8 +1,14 @@
 body{
     background: #F9F9F9;
     color: #555;
+    margin:0;
+	padding:0;
+	height: 100%;
 }
-
+.container{
+    min-height:100%;
+	position:relative !important;
+}
 #header{
     margin-top: 15px;
 }
@@ -21,7 +27,13 @@ body{
     float: right;
     text-align: center;
 }
+#middle {
+    padding:10px;
+    padding-bottom:60px;
+}
 #footer{
+    position:absolute;
+	bottom:0;
     display:block;
     height:90px;
     width: 100%;
@@ -41,8 +53,8 @@ body{
     font-size: 16px;
     margin-right: 5px;
 }
-
-.page-navigation a[data-selected] {
-
+table {
+    width: 500px;
+    margin: 0 auto;
+    text-align: left;
 }
-table { width: 500px; margin: 0 auto; text-align: left; }

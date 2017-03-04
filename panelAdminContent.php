@@ -51,7 +51,7 @@
             <div class="title"> Zarządzanie kontem </div>
             <div class="content">
                 <button onclick="#" style="margin-top: 11%;">Zarzadzanie</button>
-                <button onclick="logout.php" class="logout" style="margin-top: 1%;">Wyloguj się</button>
+                <a href="logout.php"><button type="submit" formaction="/logout.php" class="logout" style="margin-top: 1%;">Wyloguj się</button></a>
             </div>
         </div>
     </div>

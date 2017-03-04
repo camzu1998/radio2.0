@@ -31,7 +31,7 @@ if($polaczenie->connect_errno!=0){
                 unset($_SESSION['blad']);
                 $Data = date("Y.m.d H:i:s");
                 $IP = $_SERVER['REMOTE_ADDR'];
-                mysqli_query($polaczenie, "INSERT INTO `logi`(`IP`, `Login`, `Data`, `Czynnosc`) VALUES ('".$IP."', '".$login."', '".$Data."','Logowanie')");
+                mysqli_query($polaczenie, "INSERT INTO `logi`(`IP`, `Login`, `Data`, `Czynnosc`) VALUES ('{$IP}', '{$login}', '{$Data}','Logowanie')");
                 $rezultat->free_result();
                 header('Location: panelAdmin.php');
             } else {

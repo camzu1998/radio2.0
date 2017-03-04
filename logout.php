@@ -1,7 +1,6 @@
 <?php
 	session_start();
-    unset($_SESSION['Aktyw']);
-
+    unset($_SESSION['AdminLogin']);
 	session_unset();
 	@header('Location: index.php');
 ?>
