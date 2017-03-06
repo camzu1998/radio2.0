@@ -50,7 +50,7 @@ session_start();
         </div>
         <div class="row"><div class="twelve columns" style="text-align: center;"><img src="http://zspklodawa.org/images/foto/logo2.png" width="350px"/></div></div>
     </div>
-    <footer id="footer" class="container" style="max-width: 100%; margin-top: 10%;">
+    <footer id="footer" style="max-width: 100%; margin-top: 10%;">
         Kamil Langer &copy; kamillanger4@gmail.com
     </footer>
     <div id="snackbar"><span id="tekst"></span></div>

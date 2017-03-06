@@ -25,7 +25,7 @@
         <div class="row" id="header">
             <div class="twelve columns"><a href="index.php" class="noLink"><h1>Radio MIX</h1></a></div>
         </div>
-        <div class="row" id="content" style="text-align: center;">
+        <div class="row" id="content" style="margin-top: 4%;">
             <div class="twelve columns">
             <?php
                 if(!isset($_SESSION['AdminLogin'])){
@@ -35,7 +35,7 @@
                         <div id="imgUP">
                             <img src="images/user.ico" id="loginImg" height="200px"/>
                         </div>
-                        <div id="content">
+                        <div id="contentForm">
                             <form action="zaloguj.php" method="post">
                                 <span><b>Login:</b></span><br>
                                 <input type="text" name="login" placeholder="Wpisz login" required/> <br>
@@ -55,7 +55,7 @@
             </div>
         </div>
     </div>
-    <footer id="footer" class="container" style="max-width: 100%; margin-top: 2%;">
+    <footer id="footer" style="position: absolute;">
         Kamil Langer &copy; kamillanger4@gmail.com
     </footer>
 </body>
