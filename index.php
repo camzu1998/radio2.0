@@ -14,8 +14,8 @@ session_start();
     <script src="js/snackbar.js"></script>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/skeleton.css">
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="snackbar.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/snackbar.css">
 </head>
 <body>
     <div class="container">

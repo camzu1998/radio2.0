@@ -12,9 +12,9 @@
     <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/skeleton.css">
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="panelAdmin.css">
-    <link rel="stylesheet" href="loader.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/panelAdmin.css">
+    <link rel="stylesheet" href="css/loader.css">
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/loginModalClosing.js"></script>
     <script src="js/loader.js"></script>

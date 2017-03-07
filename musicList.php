@@ -9,8 +9,8 @@
     <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/skeleton.css">
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="musicList.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/musicList.css">
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
     <script src="https://www.w3schools.com/lib/w3.js"></script>
