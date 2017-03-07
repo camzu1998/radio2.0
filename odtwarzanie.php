@@ -64,8 +64,9 @@ echo "Error: ".$polaczenie->connect_errno;
     for($i=0;$i<4;$i++){
         mysqli_query($polaczenie,"INSERT INTO `Cobylograne` (`NazwaPios`, `Data`, `Godzina`) VALUES ('".$Nazwa[$i]."', '".$rok."', '".$godzina."');");
     }
-    echo '<tekst class="nazwa">'.$Nazwa[0].'</tekst>';
+    echo '<tekst class="nazwa" id="cel">'.$Nazwa[0].'</tekst>';
     ?> <br>
+<span id="spand">Cos</span>
     <audio controls id="PLAYER">
         <source  />
         <?php echo '<source src="music/'.$Nazwa[0].'.mp3" type="audio/mpeg"/>'; ?>
