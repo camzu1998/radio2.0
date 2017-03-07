@@ -18,6 +18,7 @@
                     {
                         var div = document.getElementById('dwi');
                         div.innerHTML = ObiektXMLHttp.responseText;
+                        console.log(ObiektXMLHttp.responseText);
                     }
                 }
                 // trzecia część kodu
@@ -29,7 +30,7 @@
 <body>
     <h1>AJAX w praktyce</h1>
     <form>
-        <input type = "button" value = "Pokaż wiadomość" onclick = "getData('http://localhost/radio2.0/jakistekst.txt', 'spand')">
+        <input type = "button" value = "Pokaż wiadomość" onclick = "getData('http://localhost/radio2.0/odtwarzanie.php', 'spand')">
     </form>
     <div id="dwi"> Tutaj pojawi się wiadomość. </div>
 </body>

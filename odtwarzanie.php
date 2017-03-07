@@ -59,6 +59,10 @@ echo "Error: ".$polaczenie->connect_errno;
     $Nazwa[1] = $Autor[1]." - ".$Tytul[1];
     $Nazwa[2] = $Autor[2]." - ".$Tytul[2];
     $Nazwa[3] = $Autor[3]." - ".$Tytul[3];
+    //TE ZMIENNE DO JS
+    //WYSLAC AJAXEM DO cobylograneadd.ph
+    //W cobylograne.. wpisac do bazy
+    //Wywolywac co odpalenie nuty
     $rok = date('Y-m-d');
     $godzina = date('H:i');
     for($i=0;$i<4;$i++){
@@ -66,7 +70,6 @@ echo "Error: ".$polaczenie->connect_errno;
     }
     echo '<tekst class="nazwa" id="cel">'.$Nazwa[0].'</tekst>';
     ?> <br>
-<span id="spand">Cos</span>
     <audio controls id="PLAYER">
         <source  />
         <?php echo '<source src="music/'.$Nazwa[0].'.mp3" type="audio/mpeg"/>'; ?>
