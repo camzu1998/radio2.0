@@ -33,11 +33,29 @@ session_start();
                         <tr><th>Lp.</th><th>Tytuł</th><th>Pkt.</th></tr>
                     </thead>
                     <tbody>
-                        <tr><td>1.</td><td>Cypis - Nie spać</td><td>120pkt</td></tr>
-                        <tr><td>2.</td><td>Alan Farben - Tuesday</td><td>100pkt</td></tr>
-                        <tr><td>3.</td><td>Slayback - She Sexy</td><td>80pkt</td></tr>
-                        <tr><td>4.</td><td>ZHU - In the Morning</td><td>60pkt</td></tr>
-                        <tr><td>5.</td><td>Eurythmics - Sweet Dreams</td><td>40pkt</td></tr>
+                    <?php
+                        require_once "connect.php";
+                        @$polaczenie = new mysqli($host, $db_user, $db_password, $db_name);
+                        @$polaczenie->set_charset("utf8");
+                        @$polaczenie->query("SET CHARACTER_SET utf8_polish_ci");
+                        if($polaczenie->connect_errno!=0){
+                            echo "Error: ".$polaczenie->connect_errno;
+                        } else {
+                            $lp=0;
+                            $rezultat = $polaczenie->query("SELECT * FROM `Muzyka` WHERE 1 ORDER BY `PktMiech` DESC LIMIT 0,5");
+                            $ilosc = $rezultat->num_rows;
+                            for($i=0;$i<$ilosc;$i++){
+                                $wiersz = $rezultat->fetch_assoc();
+                                    $Autor = $wiersz['Autor'];
+                                    $Tytul = $wiersz['Tytul'];
+                                    $PktMiech = $wiersz['PktMiech'];
+                                $lp++;
+                                echo'<tr>';
+                                echo'<td>'.$lp.'</td><td>'.$Autor.'</td><td>'.$Tytul.'</td><td>'.$PktMiech.'</td>';
+                                echo'</tr>';
+                            }
+                        }
+                    ?>
                     </tbody>
                 </table>
             </div>

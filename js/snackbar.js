@@ -12,3 +12,13 @@ function openSnackbarU() {
     $("#tekst").text("Brak uprawnień!");
     snackbar();
 }
+
+function openSnackbarBM() {
+    $("#tekst").text("Nie można dodać utworu!");
+    snackbar();
+}
+
+function openSnackbarDM() {
+    $("#tekst").text("Piosenka dodana poprawnie!");
+    snackbar();
+}

@@ -15,9 +15,11 @@
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/panelAdmin.css">
     <link rel="stylesheet" href="css/loader.css">
+    <link rel="stylesheet" href="css/snackbar.css">
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/loginModalClosing.js"></script>
     <script src="js/loader.js"></script>
+    <script src="js/snackbar.js"></script>
 </head>
 <body onload="timeOut();">
     <div id="loader"></div>
@@ -33,9 +35,9 @@
                     ?>
                     <div id="LoginPopup">
                         <div id="imgUP">
-                            <img src="images/user.ico" id="loginImg" height="200px"/>
+                            <img src="images/user.ico" id="loginImg"/>
                         </div>
-                        <div id="contentForm">
+                        <div id="contentForm" style="margin-top: 5%;padding-bottom: 6%;" >
                             <form action="zaloguj.php" method="post">
                                 <span><b>Login:</b></span><br>
                                 <input type="text" name="login" placeholder="Wpisz login" required/> <br>
@@ -55,6 +57,14 @@
             </div>
         </div>
     </div>
+    <div id="snackbar"><span id="tekst"></span></div>
+    <?php
+    if(isset($_SESSION['bladM'])){
+        ?><script>openSnackbarBM();</script><?php
+    } else if(isset($_SESSION['dodane'])){
+        ?><script>openSnackbarDM();</script><?php
+    }
+    ?>
     <footer id="footer" style="position: absolute;">
         Kamil Langer &copy; kamillanger4@gmail.com
     </footer>

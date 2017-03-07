@@ -3,7 +3,7 @@
 </div>
 <div class="row">
     <div class="four columns">
-        <a href="" class="noLink">
+        <a href="logi.php" class="noLink">
             <div class="window windowHover">
                 <div class="title"> Logi </div>
                 <div class="content" style="margin-top: 7%;">
@@ -17,7 +17,7 @@
         <div class="window">
             <div class="title"> Dodaj utwór </div>
             <div class="content">
-                <form action="#" method="post" style="font-size: 20px;">
+                <form action="dodaj.php" method="post" style="font-size: 20px;">
                     <input type="text" name="autor" class="inputWindow" placeholder="Autor:"/>
                     <input type="text" name="tytul" class="inputWindow" placeholder="Tytuł:"/>
                     Świąteczne:<input type="radio" name="Kategoria" value="Christmas" style="margin-right: 20px;"/>
