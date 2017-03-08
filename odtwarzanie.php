@@ -60,14 +60,9 @@ echo "Error: ".$polaczenie->connect_errno;
     $Nazwa[2] = $Autor[2]." - ".$Tytul[2];
     $Nazwa[3] = $Autor[3]." - ".$Tytul[3];
     //TE ZMIENNE DO JS
-    //WYSLAC AJAXEM DO cobylograneadd.ph
-    //W cobylograne.. wpisac do bazy
+    //WYSLAC AJAXEM DO dodajCBG.php
+    //W dodajCBG.php wpisac do bazy
     //Wywolywac co odpalenie nuty
-    $rok = date('Y-m-d');
-    $godzina = date('H:i');
-    for($i=0;$i<4;$i++){
-        mysqli_query($polaczenie,"INSERT INTO `Cobylograne` (`NazwaPios`, `Data`, `Godzina`) VALUES ('".$Nazwa[$i]."', '".$rok."', '".$godzina."');");
-    }
     echo '<tekst class="nazwa" id="cel">'.$Nazwa[0].'</tekst>';
     ?> <br>
     <audio controls id="PLAYER">
@@ -92,5 +87,5 @@ echo "Error: ".$polaczenie->connect_errno;
     <input type="button" value="STOP!" id="stop" onclick="stop();"/>
     <input type="button" value="START!" id="start" onclick="start();"/>
     <input type="button" value="REFRESH!" id="refresh" onclick="reload();"/>
-    <script>czas();</script>
+    <?php echo '<script>czas("'.$Nazwa[0].'","'.$Nazwa[1].'","'.$Nazwa[2].'","'.$Nazwa[3].'");</script>' ?>
 <?php } ?>
