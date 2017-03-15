@@ -59,7 +59,7 @@ session_start();
                     </tbody>
                 </table>
             </div>
-            <div class="six columns" style="text-align: center; height: 200px; margin-top: 11%;">
+            <div class="six columns" id="obrazek">
                 <form action="#" method="post">
                     <div class="row"><input class="u-full-width" type="text" name="tytul" placeholder="Tutaj wpisz tytuł"/></div>
                     <div class="row"><div class="twelve columns"><input type="submit" name="szukaj" value="szukaj"/></div></div>
@@ -68,7 +68,7 @@ session_start();
         </div>
         <div class="row"><div class="twelve columns" style="text-align: center;"><img src="http://zspklodawa.org/images/foto/logo2.png" width="350px"/></div></div>
     </div>
-    <footer id="footer" style="max-width: 100%; margin-top: 10%;">
+    <footer id="footer">
         Kamil Langer &copy; kamillanger4@gmail.com
     </footer>
     <div id="snackbar"><span id="tekst"></span></div>

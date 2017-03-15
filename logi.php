@@ -64,6 +64,7 @@ session_start();
                             });
                         </script>
             </div>
+            <div class="twelve columns" style="text-align:center;"><a href="panelAdmin.php">Wróć</a></div>
         </div>
     </div>
     <footer id="footer" style="max-width: 100%; margin-top: 10%;">

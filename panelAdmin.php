@@ -22,8 +22,8 @@
     <script src="js/snackbar.js"></script>
 </head>
 <body onload="timeOut();">
-    <div id="loader"></div>
     <div class="container">
+        <div id="loader"></div>
         <div class="row" id="header">
             <div class="twelve columns"><a href="index.php" class="noLink"><h1>Radio MIX</h1></a></div>
         </div>
@@ -57,7 +57,6 @@
             </div>
         </div>
     </div>
-    <div id="snackbar"><span id="tekst"></span></div>
     <?php
     if(isset($_SESSION['bladM'])){
         ?><script>openSnackbarBM();</script><?php
@@ -65,8 +64,9 @@
         ?><script>openSnackbarDM();</script><?php
     }
     ?>
-    <footer id="footer" style="position: absolute;">
+    <footer id="footer">
         Kamil Langer &copy; kamillanger4@gmail.com
     </footer>
+    <div id="snackbar"><span id="tekst"></span></div>
 </body>
 </html>
