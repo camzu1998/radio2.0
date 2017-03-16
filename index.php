@@ -81,6 +81,10 @@ session_start();
         ?><script>openSnackbar();</script><?php
     } else if(isset($_SESSION['bladU'])){
         ?><script>openSnackbarU();</script><?php
+    } else if(isset($_SESSION['oddalesGlos'])) {
+        ?><script>openSnackbarGlos();</script><?php
+    } else if(isset($_SESSION['oddalesGlosP'])) {
+        ?><script>openSnackbarGlosP();</script><?php
     }
     ?>
 </body>

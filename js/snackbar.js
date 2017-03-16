@@ -22,3 +22,13 @@ function openSnackbarDM() {
     $("#tekst").text("Piosenka dodana poprawnie!");
     snackbar();
 }
+
+function openSnackbarGlos() {
+    $("#tekst").text("Oddałeś już dzisiaj głos na tę piosenkę!");
+    snackbar();
+}
+
+function openSnackbarGlosP() {
+    $("#tekst").text("Dziękujemy za twój głos!");
+    snackbar();
+}

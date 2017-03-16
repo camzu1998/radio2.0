@@ -37,31 +37,33 @@
                         if ($polaczenie->connect_errno!=0){
                             echo "Error: ".$polaczenie->connect_errno;
                         }else{ ?>
-                        <table id="utwory">
-                            <thead><tr><th></th><th>Lp.</th><th>Autor</th><th>Tytuł</th></tr></thead>
-                            <tbody>
-                            <?php
-                            $lp=1;
-                            $rezultat = $polaczenie->query("SELECT * FROM `Muzyka` WHERE 1");
-                            for($i=0;$i<$rezultat->num_rows;$i++){
-                                $wiersz = $rezultat->fetch_assoc();
-                                    $ID = $wiersz['ID'];
-                                    $Autor = $wiersz['Autor'];
-                                    $Tytul = $wiersz['Tytul'];
-                                echo '<tr class="item">';
-                                echo '<td><input type="radio" name="tytul" value='.$ID.'/></td><td>'.$lp.'</td><td>'.$Autor.'</td><td>'.$Tytul.'</td>';
-                                echo '</tr>';
-                                $lp++;
-                            }
-                        }?>
-                            </tbody>
-                        </table>
-                        <script>
-                            $(function () {
-                                $('#utwory').paginate({ limit: 10 });
-                            });
-                        </script>
-                        <!-- Button do wysłania -->
+                        <form action="glosuj.php" method="post">
+                            <table id="utwory">
+                                <thead><tr><th></th><th>Lp.</th><th>Autor</th><th>Tytuł</th></tr></thead>
+                                <tbody>
+                                <?php
+                                $lp=1;
+                                $rezultat = $polaczenie->query("SELECT * FROM `Muzyka` WHERE 1");
+                                for($i=0;$i<$rezultat->num_rows;$i++){
+                                    $wiersz = $rezultat->fetch_assoc();
+                                        $ID = $wiersz['ID'];
+                                        $Autor = $wiersz['Autor'];
+                                        $Tytul = $wiersz['Tytul'];
+                                    echo '<tr class="item">';
+                                    echo '<td><input type="radio" name="tytul" value='.$ID.'/></td><td>'.$lp.'</td><td>'.$Autor.'</td><td>'.$Tytul.'</td>';
+                                    echo '</tr>';
+                                    $lp++;
+                                }
+                            }?>
+                                </tbody>
+                            </table>
+                            <script>
+                                $(function () {
+                                    $('#utwory').paginate({ limit: 10 });
+                                });
+                            </script>
+                            <input type="submit" name="Glosuj" value="Głosuj!"/>
+                        </form>
                     </div>
                 </div>
             </form>

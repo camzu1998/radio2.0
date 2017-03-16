@@ -20,7 +20,8 @@ session_start();
 <body>
     <div class="container">
         <div class="twelve columns">
-
+            <!--<form action="waszePios.php"> </form>-->
+            <h3>Strona w trakcie budowy.</h3>
         </div>
     </div>
     <footer id="footer">
