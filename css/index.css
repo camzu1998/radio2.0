@@ -6,7 +6,7 @@ body html{
 	height: 100%;
 }
 .container{
-    min-height: calc(100vh - 70px);
+    min-height: calc(100vh - 110px);
 	position: relative !important;
 }
 #header{
@@ -34,9 +34,9 @@ body html{
 #obrzek{
     text-align: center;
     height: 200px;
-    margin-top: 11%;
+    margin-top: 10px;
     overflow: auto;
-    padding-bottom: 60px;
+    padding-bottom: 30px;
 }
 #footer{
 	position: relative;

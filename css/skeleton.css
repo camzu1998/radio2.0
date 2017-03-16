@@ -461,9 +461,6 @@ header {
 #footer {
     clear: both;
     border-top: 1px solid #ccc;
-    margin-top: 2rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
     height: auto;
     text-align: center; }
 
