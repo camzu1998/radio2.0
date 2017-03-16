@@ -67,8 +67,8 @@ session_start();
             </div>
         </div>
         <div class="row">
-            <div class="twelve columns"  id="obrazek" style="text-align: center;">
-                <img src="http://zspklodawa.org/images/foto/logo2.png" width="350px"/>
+            <div class="twelve columns" style="text-align: center;">
+                <img src="http://zspklodawa.org/images/foto/logo2.png" id="obrazek" width="300px"/>
             </div>
         </div>
     </div>
