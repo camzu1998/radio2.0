@@ -25,7 +25,7 @@
             <?php include"menu.php" ?>
         </div>
         <div class="row" id="middle">
-            <form action="#" method="post" style="text-align: center; margin-top: 4%;">
+            <form action="glosuj.php" method="post" style="text-align: center; margin-top: 4%;">
                 <input type="text" id="szukajka" oninput="w3.filterHTML('#utwory', '.item', this.value)" name="search" placeholder="Szukaj..">
                 <div class="row" id="content" style="margin-top: 0% !important;">
                     <div class="twelve columns" id="center">
@@ -37,33 +37,31 @@
                         if ($polaczenie->connect_errno!=0){
                             echo "Error: ".$polaczenie->connect_errno;
                         }else{ ?>
-                        <form action="glosuj.php" method="post">
-                            <table id="utwory">
-                                <thead><tr><th></th><th>Lp.</th><th>Autor</th><th>Tytuł</th></tr></thead>
-                                <tbody>
-                                <?php
-                                $lp=1;
-                                $rezultat = $polaczenie->query("SELECT * FROM `Muzyka` WHERE 1");
-                                for($i=0;$i<$rezultat->num_rows;$i++){
-                                    $wiersz = $rezultat->fetch_assoc();
-                                        $ID = $wiersz['ID'];
-                                        $Autor = $wiersz['Autor'];
-                                        $Tytul = $wiersz['Tytul'];
-                                    echo '<tr class="item">';
-                                    echo '<td><input type="radio" name="tytul" value='.$ID.'/></td><td>'.$lp.'</td><td>'.$Autor.'</td><td>'.$Tytul.'</td>';
-                                    echo '</tr>';
-                                    $lp++;
-                                }
-                            }?>
-                                </tbody>
-                            </table>
-                            <script>
-                                $(function () {
-                                    $('#utwory').paginate({ limit: 10 });
-                                });
-                            </script>
-                            <input type="submit" name="Glosuj" value="Głosuj!"/>
-                        </form>
+                        <table id="utwory">
+                            <thead><tr><th></th><th>Lp.</th><th>Autor</th><th>Tytuł</th></tr></thead>
+                            <tbody>
+                            <?php
+                            $lp=1;
+                            $rezultat = $polaczenie->query("SELECT * FROM `Muzyka` WHERE 1");
+                            for($i=0;$i<$rezultat->num_rows;$i++){
+                                $wiersz = $rezultat->fetch_assoc();
+                                    $ID = $wiersz['ID'];
+                                    $Autor = $wiersz['Autor'];
+                                    $Tytul = $wiersz['Tytul'];
+                                echo '<tr class="item">';
+                                echo '<td><input type="radio" name="tytul" value='.$ID.'/></td><td>'.$lp.'</td><td>'.$Autor.'</td><td>'.$Tytul.'</td>';
+                                echo '</tr>';
+                                $lp++;
+                            }
+                        }?>
+                            </tbody>
+                        </table>
+                        <script>
+                            $(function () {
+                                $('#utwory').paginate({ limit: 10 });
+                            });
+                        </script>
+                        <input type="submit" name="Glosuj" value="Głosuj!"/>
                     </div>
                 </div>
             </form>
