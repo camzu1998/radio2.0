@@ -25,7 +25,7 @@ echo "Error: ".$polaczenie->connect_errno;
         }
     } else if($nazwa == "wczoraj"){
         //Wszystkie piosenki z wczoraj
-        $dzien = strtotime("-1 day");
+        $dzien = date('Y-m-d',strtotime("-1 days"));
         $rezultat = $polaczenie->query("SELECT * FROM `cobylograne` WHERE `Data`='$dzien'");
         $ilosc = $rezultat->num_rows;
         $lp = 0;
