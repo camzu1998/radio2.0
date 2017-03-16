@@ -30,7 +30,7 @@ session_start();
                 <h2>Top 5 miesiąca</h2>
                 <table class="u-full-width">
                     <thead>
-                        <tr><th>Lp.</th><th>Tytuł</th><th>Pkt.</th></tr>
+                        <tr><th>Lp.</th><th>Autor</th><th>Tytuł</th><th>Pkt.</th></tr>
                     </thead>
                     <tbody>
                     <?php

@@ -388,7 +388,7 @@ th,
 td {
     padding: 5px 10px; }
 th {
-    text-align: center; }
+    /*text-align: center;*/}
 td {
     text-align: left; }
 table.dataTable.hover tbody tr:hover, table.dataTable.display tbody tr:hover {
