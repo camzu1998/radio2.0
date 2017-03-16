@@ -61,6 +61,7 @@
                                 $('#utwory').paginate({ limit: 10 });
                             });
                         </script>
+                        <!-- Button do wysłania -->
                     </div>
                 </div>
             </form>
