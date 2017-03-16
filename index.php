@@ -86,6 +86,10 @@ session_start();
     } else if(isset($_SESSION['oddalesGlosP'])) {
         ?><script>openSnackbarGlosP();</script><?php
     }
+    unset($_SESSION['blad']);
+    unset($_SESSION['bladU']);
+    unset($_SESSION['oddalesGlos']);
+    unset($_SESSION['oddalesGlosP']);
     ?>
 </body>
 </html>
