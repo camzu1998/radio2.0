@@ -1,5 +1,5 @@
 function snackbar(){
-    var x = document.getElementById("snackbar")
+    var x = document.getElementById("snackbar");
     x.className = "show";
     setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
 }
@@ -30,5 +30,15 @@ function openSnackbarGlos() {
 
 function openSnackbarGlosP() {
     $("#tekst").text("Dziękujemy za twój głos!");
+    snackbar();
+}
+
+function openSnackbarUs() {
+    $("#tekst").text("Piosenka została usunięta!");
+    snackbar();
+}
+
+function openSnackbarUsB() {
+    $("#tekst").text("Nie znaleziono takiej piosenki!");
     snackbar();
 }

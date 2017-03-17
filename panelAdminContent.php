@@ -31,8 +31,10 @@
         <div class="window">
             <div class="title"> Usuń utwór </div>
             <div class="content">
-                <form action="#" method="post" style="margin-top: 12%;">
-                    <input type="submit" name="usun" value="Usuń!"/>
+                <form action="usun.php" method="post" style="font-size: 20px;">
+                    <input type="text" name="autor" class="inputWindow" placeholder="Autor:"/>
+                    <input type="text" name="tytul" class="inputWindow" placeholder="Tytuł:"/>
+                    <input type="submit" name="usun" class="logout" value="Usuń!"/>
                 </form>
             </div>
         </div>

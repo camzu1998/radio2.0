@@ -57,16 +57,24 @@
             </div>
         </div>
     </div>
+    <footer id="footer">
+        Kamil Langer &copy; kamillanger4@gmail.com
+    </footer>
+    <div id="snackbar"><span id="tekst"></span></div>
     <?php
     if(isset($_SESSION['bladM'])){
         ?><script>openSnackbarBM();</script><?php
     } else if(isset($_SESSION['dodane'])){
         ?><script>openSnackbarDM();</script><?php
+    } else if(isset($_SESSION['usunieta'])){
+        ?><script>openSnackbarUs();</script><?php
+    } else if(isset($_SESSION['usunietaB'])){
+        ?><script>openSnackbarUsB();</script><?php
     }
+    unset($_SESSION['bladM']);
+    unset($_SESSION['dodane']);
+    unset($_SESSION['usunieta']);
+    unset($_SESSION['usunietaB']);
     ?>
-    <footer id="footer">
-        Kamil Langer &copy; kamillanger4@gmail.com
-    </footer>
-    <div id="snackbar"><span id="tekst"></span></div>
 </body>
 </html>
