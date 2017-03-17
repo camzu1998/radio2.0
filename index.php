@@ -12,6 +12,7 @@ session_start();
     <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/snackbar.js"></script>
+    <script src="js/terazGraneController.js"></script>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/skeleton.css">
     <link rel="stylesheet" href="css/index.css">
@@ -59,11 +60,9 @@ session_start();
                     </tbody>
                 </table>
             </div>
-            <div class="six columns" style="text-align: center; margin-top: inherit;">
-                <form action="#" method="post">
-                    <div class="row"><input class="u-full-width" type="text" name="tytul" placeholder="Tutaj wpisz tytuł"/></div>
-                    <div class="row"><div class="twelve columns"><input type="submit" name="szukaj" value="szukaj"/></div></div>
-                </form>
+            <div class="six columns">
+                <span id="coJest"><h2 id="coJestTxt" style="line-height: 7;">Teraz grane: ---</h2></span>
+                <script>terazGrane();</script>
             </div>
         </div>
         <div class="row">

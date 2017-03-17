@@ -1,9 +1,12 @@
 function zapis(nazwa) {
     var xmlhttp = new XMLHttpRequest();
+    var tryb = "zapis";
     xmlhttp.open("GET", "dodajCBG.php?Nazwa=" + nazwa, true);
     xmlhttp.send();
-    console.log("Wysłano");
     console.log(xmlhttp.responseText);
+    xmlhttp.open("GET", "cojestGrane.php?Teraz=" + nazwa + "&Tryb="+tryb, true);
+    xmlhttp.send();
+    console.log("Wysłano");
 }
 
 function stop() {
@@ -16,6 +19,12 @@ function stop() {
     player1.pause();
     player2.pause();
     player3.pause();
+    var nazwa = "przerwa";
+    var xmlhttp = new XMLHttpRequest();
+    var tryb = "zapis";
+    xmlhttp.open("GET", "cojestGrane.php?Teraz=" + nazwa + "&Tryb="+tryb, true);
+    xmlhttp.send();
+    console.log("Wysłano");
 }
 
 function start(nazwa1, nazwa2, nazwa3, nazwa4) {
