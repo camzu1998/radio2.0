@@ -45,7 +45,7 @@ session_start();
                             <tbody>
                             <?php
                             $lp=1;
-                            $rezultat = $polaczenie->query("SELECT * FROM `logi` WHERE 1");
+                            $rezultat = $polaczenie->query("SELECT * FROM `logi` ORDER BY `logi`.`ID` DESC");
                             for($i=0;$i<$rezultat->num_rows;$i++){
                                 $wiersz = $rezultat->fetch_assoc();
                                     $ID = $wiersz['ID'];
