@@ -84,11 +84,26 @@ session_start();
         ?><script>openSnackbarGlos();</script><?php
     } else if(isset($_SESSION['oddalesGlosP'])) {
         ?><script>openSnackbarGlosP();</script><?php
+    } else if(isset($_SESSION['bladMuzyka'])) {
+        ?><script>openSnackbarbladMuzyka();</script><?php
+    } else if(isset($_SESSION['bladWasze'])) {
+        ?><script>openSnackbarbladWasze();</script><?php
+    } else if(isset($_SESSION['bladWaszeL'])) {
+        ?><script>openSnackbarbladWaszeL();</script><?php
+    } else if(isset($_SESSION['dodanoWasze'])) {
+        ?><script>openSnackbardodanoWasze();</script><?php
+    } else if(isset($_SESSION['IPBAN'])) {
+        ?><script>openSnackbarIPBAN();</script><?php
     }
     unset($_SESSION['blad']);
     unset($_SESSION['bladU']);
     unset($_SESSION['oddalesGlos']);
     unset($_SESSION['oddalesGlosP']);
+    unset($_SESSION['bladMuzyka']);
+    unset($_SESSION['bladWasze']);
+    unset($_SESSION['bladWaszeL']);
+    unset($_SESSION['dodanoWasze']);
+    unset($_SESSION['IPBAN']);
     ?>
 </body>
 </html>

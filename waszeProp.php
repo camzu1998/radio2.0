@@ -19,9 +19,25 @@ session_start();
 </head>
 <body>
     <div class="container">
-        <div class="twelve columns">
-            <!--<form action="waszePios.php"> </form>-->
-            <h3>Strona w trakcie budowy.</h3>
+        <div class="row" id="header">
+            <div class="twelve columns"><a href="index.php" class="noLink"><h1>Radio MIX</h1></a></div>
+        </div>
+        <div class="row" id="menu">
+            <?php include"menu.php" ?>
+        </div>
+        <div class="row" style="margin-top: 1%;">
+            <h3>Uwaga!</h3>
+            <h4>Zabrania się dodawania piosenek w których występują wulgaryzmy, które obrażają religie itd.</h4>
+            <h5>W konsekwencji już nigdy więcej nie będziesz mógł dodać piosenki z tego IP.</h5>
+            <form action="waszePios.php" method="post" style="text-align: center;">
+                <span>Autor</span><br>
+                <input type="text" name="Autor" required/><br>
+                <span>Tytuł</span><br>
+                <input type="text" name="Tytul" required/><br>
+                <span>Link do piosenki(Youtube, wrzuta)</span><br>
+                <input type="text" name="Link" required/><br>
+                <input type="submit" class="button-primary" name="Dodaj" value="Dodaj!"/>
+            </form>
         </div>
     </div>
     <footer id="footer">
