@@ -43,8 +43,20 @@
     <div class="four columns" style="margin-left: 0%;">
         <div class="window">
             <div class="title"> Propozycje uczniów </div>
-            <div class="content">
-                <button onclick="#" style="margin-top: 12%;">Sprawdź</button>
+            <div class="content" style="font-size: 17px; margin-top: inherit;">
+                <?php
+                require_once "connect.php";
+                @$polaczenie = new mysqli($host, $db_user, $db_password, $db_name);
+                @$polaczenie->set_charset("utf8");
+                @$polaczenie->query("SET CHARACTER_SET utf8_polish_ci");
+                if($polaczenie->connect_errno!=0){
+                    echo "Error: ".$polaczenie->connect_errno;
+                } else {
+                    $rezultat = $polaczenie->query("SELECT * FROM `waszeprop` WHERE `Status`='0'");
+                    echo "Ilość oczekujących piosenek: ".$rezultat->num_rows."<br>";
+                }
+                ?>
+                <button onclick="sprawdzanie()" style="margin-top: 12%;">Sprawdź</button>
             </div>
         </div>
     </div>
@@ -53,7 +65,7 @@
             <div class="title"> Zarządzanie kontem </div>
             <div class="content">
                 <button onclick="#" style="margin-top: 11%;">Zarządzanie</button>
-                <a href="logout.php"><button type="submit" formaction="/logout.php" class="logout" style="margin-top: 1%;">Wyloguj się</button></a>
+                <button type="submit" onclick="logout()" class="logout" style="margin-top: 1%;">Wyloguj się</button>
             </div>
         </div>
     </div>

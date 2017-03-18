@@ -67,3 +67,13 @@ function openSnackbarIPBAN() {
     $("#tekst").text("To IP ma zakaz dodawania piosenek!!!");
     snackbar();
 }
+
+function openSnackbarOdrzucono() {
+    $("#tekst").text("To IP ma zakaz dodawania piosenek!!!");
+    snackbar();
+}
+
+function openSnackbarBAN() {
+    $("#tekst").text("IP zbanowane!!!");
+    snackbar();
+}

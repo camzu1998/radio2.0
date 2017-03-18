@@ -20,6 +20,14 @@
     <script src="js/loginModalClosing.js"></script>
     <script src="js/loader.js"></script>
     <script src="js/snackbar.js"></script>
+    <script>
+        function sprawdzanie(){
+            window.location.href = "sprawdzaniePios.php";
+        }
+        function logout(){
+            window.location.href = "logout.php";
+        }
+    </script>
 </head>
 <body onload="timeOut();">
     <div class="container">

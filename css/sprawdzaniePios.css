@@ -1,0 +1,8 @@
+.add:hover{
+    background: rgba(0, 215, 0, 0.5);
+    transition: background 1s;
+}
+.delete:hover{
+    background: rgba(215, 0, 0, 0.5);
+    transition: background 1s;
+}
