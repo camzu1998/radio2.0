@@ -25,7 +25,7 @@ session_start();
         <div class="row" id="menu">
             <?php include"menu.php" ?>
         </div>
-        <div class="row" id="content">
+        <div class="row" id="content" style="text-align:center;">
             <?php include"odtwarzanie.php"; ?>
         </div>
     </div>
