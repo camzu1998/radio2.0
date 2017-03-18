@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once "connect.php";
 $polaczenie = @new mysqli($host, $db_user, $db_password, $db_name);
 @$polaczenie->set_charset("utf8");
@@ -14,7 +15,7 @@ echo "Error: ".$polaczenie->connect_errno;
         $IP = $_SERVER['REMOTE_ADDR'];
         //SPRAWDZANIE CZY NIE ZBANOWANY IP
         $rezultatBan = $polaczenie->query("SELECT * FROM `ban` WHERE `IP`='".$IP."'");
-        if($rezultatBan != 0){
+        if($rezultatBan->num_rows != 0){
             $_SESSION['IPBAN'] = 1;
         } else {
             //KONWERSJA ZNAKÓW
@@ -23,18 +24,21 @@ echo "Error: ".$polaczenie->connect_errno;
             $Autor = mb_convert_case($AutorS, MB_CASE_TITLE, "UTF-8");
             $Tytul = mb_convert_case($TytulS, MB_CASE_TITLE, "UTF-8");
             //SZUKANIE W BAZIE PODOBNYCH PIOSENEK
-            $rezultatMuzyka = $polaczenie->query("SELECT * FROM `Muzyka` WHERE `Autor`='".$Autor."' AND `Tytul`='".$Tytul."';");
-            $rezultatWasze = $polaczenie->query("SELECT * FROM `WaszeProp` WHERE `Autor`='".$Autor."' AND `Tytul`='".$Tytul."';");
-            $rezultatWaszeLink = $polaczenie->query("SELECT * FROM `WaszeProp` WHERE `Link`='".$Link."'");
-            if($rezultatMuzyka != 0){
+            $rezultatMuzyka = $polaczenie->query("SELECT * FROM `muzyka` WHERE `Autor`='".$Autor."' AND `Tytul`='".$Tytul."';");
+            $rezultatWasze = $polaczenie->query("SELECT * FROM `waszeprop` WHERE `Autor`='".$Autor."' AND `Tytul`='".$Tytul."';");
+            $rezultatWaszeLink = $polaczenie->query("SELECT * FROM `waszeprop` WHERE `Link`='".$Link."'");
+            if($rezultatMuzyka->num_rows != 0){
                 $_SESSION['bladMuzyka'] = 1;
-            } else if($rezultatWasze != 0){
+            } else if($rezultatWasze->num_rows != 0){
                 $_SESSION['bladWasze'] = 1;
-            } else if($rezultatWaszeLink != 0){
+            } else if($rezultatWaszeLink->num_rows != 0){
                 $_SESSION['bladWaszeL'] = 1;
             } else {
-                mysqli_query($polaczenie, "INSERT IN TO `WaszeProp` (`Autor`, `Tytul`, `Link`, `IP`, `Status`) VALUES ('".$Autor."', '".$Tytul."', '".$Link."', '".$IP."', '0')");
+                mysqli_query($polaczenie, "INSERT INTO `waszeprop`(`Autor`, `Tytul`, `Link`, `IP`, `Status`) VALUES ('{$Autor}', '{$Tytul}', '{$Link}', '{$IP}', '0')");
                 $_SESSION['dodanoWasze'] = 1;
+                //LOGI
+                $Data = date("Y.m.d H:i:s");
+                mysqli_query($polaczenie, "INSERT INTO `logi`(`IP`, `Login`, `Data`, `Czynnosc`) VALUES ('{$IP}', '', '{$Data}','Dodanie piosenki do wasze propozycje.')");
             }
         }
     }
