@@ -26,6 +26,11 @@ if ($polaczenie->connect_errno!=0){
         //KOMUNIKAT
         $_SESSION['usunieta'] = 1;
         unset($_SESSION['usunietaB']);
+        $login = $_SESSION['login'];
+        $Data = date("Y.m.d H:i:s");
+        $IP = $_SERVER['REMOTE_ADDR'];
+        $info = "Usunięto piosenkę: ".$Autor."-".$Tytul;
+        mysqli_query($polaczenie, "INSERT INTO `logi`(`IP`, `Login`, `Data`, `Czynnosc`) VALUES ('{$IP}', '{$login}', '{$Data}','{$info}')");
         @header('Location: panelAdmin.php');
     }else{
         $_SESSION['usunietaB'] = 1;
