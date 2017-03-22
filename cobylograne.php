@@ -50,7 +50,7 @@ session_start();
                             if($polaczenie->connect_errno!=0){
                                 echo "Error: ".$polaczenie->connect_errno;
                             } else {
-                                $rezultat = $polaczenie->query("SELECT * FROM `Cobylograne` WHERE 1");
+                                $rezultat = $polaczenie->query("SELECT * FROM `cobylograne` WHERE 1");
                                 $ilosc = $rezultat->num_rows;
                                 $lp = 0;
                                 for($i=0;$i<$ilosc;$i++) {

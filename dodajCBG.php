@@ -9,7 +9,7 @@ echo "Error: ".$polaczenie->connect_errno;
     $nazwa = $_REQUEST["Nazwa"];
     $rok = date('Y-m-d');
     $godzina = date('H:i');
-    mysqli_query($polaczenie,"INSERT INTO `Cobylograne` (`NazwaPios`, `Data`, `Godzina`) VALUES ('".$nazwa."', '".$rok."', '".$godzina."');");
+    mysqli_query($polaczenie,"INSERT INTO `cobylograne` (`NazwaPios`, `Data`, `Godzina`) VALUES ('".$nazwa."', '".$rok."', '".$godzina."');");
     echo mysqli_error;
 }
 ?>

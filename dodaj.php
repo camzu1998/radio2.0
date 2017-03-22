@@ -21,7 +21,7 @@ if ($polaczenie->connect_errno!=0){
     $Autor = htmlentities($Autor, ENT_QUOTES, "UTF-8");
     $Tytul = htmlentities($Tytul, ENT_QUOTES, "UTF-8");
     //SPRAWDZENIE CZY JEST W BAZIE
-    $rezultat = $polaczenie->query("SELECT * FROM `Muzyka` WHERE `Autor`='".$Autor."' AND `Tytul`='".$Tytul."';");
+    $rezultat = $polaczenie->query("SELECT * FROM `muzyka` WHERE `Autor`='".$Autor."' AND `Tytul`='".$Tytul."';");
     $ilosc = $rezultat->num_rows;
     if($ilosc == 0){
         //DODAWANIE DO BAZY DANYCH

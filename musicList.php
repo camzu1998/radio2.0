@@ -42,7 +42,7 @@
                             <tbody>
                             <?php
                             $lp=1;
-                            $rezultat = $polaczenie->query("SELECT * FROM `Muzyka` WHERE 1");
+                            $rezultat = $polaczenie->query("SELECT * FROM `muzyka` WHERE 1");
                             for($i=0;$i<$rezultat->num_rows;$i++){
                                 $wiersz = $rezultat->fetch_assoc();
                                     $ID = $wiersz['ID'];

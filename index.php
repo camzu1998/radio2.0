@@ -43,7 +43,7 @@ session_start();
                             echo "Error: ".$polaczenie->connect_errno;
                         } else {
                             $lp=0;
-                            $rezultat = $polaczenie->query("SELECT * FROM `Muzyka` WHERE 1 ORDER BY `PktMiech` DESC LIMIT 0,5");
+                            $rezultat = $polaczenie->query("SELECT * FROM `muzyka` WHERE 1 ORDER BY `PktMiech` DESC LIMIT 0,5");
                             $ilosc = $rezultat->num_rows;
                             for($i=0;$i<$ilosc;$i++){
                                 $wiersz = $rezultat->fetch_assoc();

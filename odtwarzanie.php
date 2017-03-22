@@ -9,28 +9,28 @@ echo "Error: ".$polaczenie->connect_errno;
     $data = date("H:i");
     if($data == "09:34" || $data == "09:35" || $data == "09:36" || $data == "12:24" || $data == "12:25" || $data == "12:26"){
         //POBIERANIE TOP 3 PIOS
-        $top3 = $polaczenie->query("SELECT * FROM `Muzyka` ORDER BY `Pkt` DESC LIMIT 0,4");
+        $top3 = $polaczenie->query("SELECT * FROM `muzyka` ORDER BY `Pkt` DESC LIMIT 0,4");
         for($i=0; $i<4;$i++){
             $wiersz = $top3->fetch_assoc();
                 $Autor[$i] = $wiersz['Autor'];
                 $Tytul[$i] = $wiersz['Tytul'];
         }
         //CZYSZCZENIE PKT
-        mysqli_query("UPDATE `Muzyka` SET `Pkt`='0' WHERE 1 ");
+        mysqli_query("UPDATE `muzyka` SET `Pkt`='0' WHERE 1 ");
     } else {
-    $rozne = $polaczenie->query("SELECT * FROM `Muzyka` WHERE 1");
+    $rozne = $polaczenie->query("SELECT * FROM `muzyka` WHERE 1");
 
         $ilosc = $rozne->num_rows;
         for($i=0; $i<4;$i++) {
             $piosenka[$i] = rand(1,$ilosc);
-            $rezultat = $polaczenie->query("SELECT * FROM `Muzyka` WHERE `ID` = '".$piosenka[$i]."' AND `Kategoria`!='Christmas'");
+            $rezultat = $polaczenie->query("SELECT * FROM `muzyka` WHERE `ID` = '".$piosenka[$i]."' AND `Kategoria`!='Christmas'");
             $wiersz = $rezultat->fetch_assoc();
                 $Autor[$i] = $wiersz['Autor'];
                 $Tytul[$i] = $wiersz['Tytul'];
                 $Kategoria[$i] = $wiersz['Kategoria'];
             while($Autor[$i] == "") {
                 $piosenka[$i] = rand(1,$ilosc);
-                $rezultat = $polaczenie->query("SELECT * FROM `Muzyka` WHERE `ID` = '".$piosenka[$i]."' AND `Kategoria`!='Christmas'");
+                $rezultat = $polaczenie->query("SELECT * FROM `muzyka` WHERE `ID` = '".$piosenka[$i]."' AND `Kategoria`!='Christmas'");
                 $wiersz = $rezultat->fetch_assoc();
                     $Autor[$i] = $wiersz['Autor'];
                     $Tytul[$i] = $wiersz['Tytul'];
