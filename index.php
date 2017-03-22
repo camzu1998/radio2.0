@@ -55,7 +55,7 @@ session_start();
                                 echo'<td>'.$lp.'</td><td>'.$Autor.'</td><td>'.$Tytul.'</td><td>'.$PktMiech.'</td>';
                                 echo'</tr>';
                             }
-                            $rezultat = $polaczenie->query("SELECT * FROM `muzyka` WHERE 1");
+                            $rezultatI = $polaczenie->query("SELECT * FROM `muzyka` WHERE 1");
                         }
                     ?>
                     </tbody>
@@ -63,7 +63,7 @@ session_start();
             </div>
             <div class="six columns">
                 <span id="coJest"><h2 id="coJestTxt" style="line-height: 5;">Teraz grane: ---</h2></span>
-                <span id="coJest"><h3> Aktualna ilość piosenek w bazie: <?php echo $rezultat->num_rows; ?></h3></span>
+                <span id="coJest"><h3> Aktualna ilość piosenek w bazie: <?php echo $rezultatI->num_rows; ?></h3></span>
                 <script>terazGrane();</script>
             </div>
         </div>
