@@ -63,7 +63,7 @@ session_start();
             </div>
             <div class="six columns">
                 <span id="coJest"><h2 id="coJestTxt" style="line-height: 5;">Teraz grane: ---</h2></span>
-                <span id="coJest"><h3> Aktualna ilość piosenek w bazie: <?php echo $rezultatI->num_rows; ?></h3></span>
+                <span><h3> Aktualna ilość piosenek w bazie: <?php echo $rezultatI->num_rows; ?></h3></span>
                 <script>terazGrane();</script>
             </div>
         </div>
