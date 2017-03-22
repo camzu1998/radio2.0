@@ -50,12 +50,12 @@ session_start();
                             if($polaczenie->connect_errno!=0){
                                 echo "Error: ".$polaczenie->connect_errno;
                             } else {
-                                $rezultat = $polaczenie->query("SELECT * FROM `cobylograne` WHERE 1");
-                                $ilosc = $rezultat->num_rows;
+                                $rezultatC = $polaczenie->query("SELECT * FROM `cobylograne` WHERE 1");
+                                $ilosc = $rezultatC->num_rows;
                                 $lp = 0;
                                 for($i=0;$i<$ilosc;$i++) {
                                     $lp++;
-                                    $wiersz = $rezultat->fetch_assoc();
+                                    $wiersz = $rezultatC->fetch_assoc();
                                         $Autor = $wiersz['NazwaPios'];
                                         $Data = $wiersz['Data'];
                                         $Godzina = $wiersz['Godzina'];
